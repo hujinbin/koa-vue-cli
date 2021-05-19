@@ -1,7 +1,7 @@
 require('babel-polyfill');
 require('source-map-support').install();
 require('@babel/register')({
-    presets: ['@babel/preset-env', '@babel/preset-react']
+    presets: ['@babel/preset-env']
 });
 require('@babel/core').transform('code', {
     plugins: ['@babel/plugin-transform-runtime']

@@ -1,15 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import RoutesIndex from './page/index.jsx';
-import { Provider } from 'react-redux';
-import store from './redux/store';
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App.vue'
 
-ReactDOM.render(
-    <Provider store={store}>
-        <Router>
-            <RoutesIndex />
-        </Router>
-    </Provider>,
-    document.getElementById('root')
-);
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})

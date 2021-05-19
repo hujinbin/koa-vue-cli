@@ -1,10 +1,27 @@
-import { connect } from 'react-redux';
-import { RoutesIndex } from '../router/index.jsx';
-import './index.less';
+<template>
+  <div id="app">
+    <HelloWorld/>
+  </div>
+</template>
 
-export default connect(
-    state => state,
-    undefined,
-    undefined,
-    { pure: false }
-)(RoutesIndex);
+<script>
+import HelloWorld from './components/Home'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>

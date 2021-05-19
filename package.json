@@ -27,13 +27,13 @@
     "koa-views": "^6.1.5",
     "koa2-cors": "^2.0.6",
     "pomelo-logger": "^0.1.7",
-    "source-map-support": "^0.5.12"
+    "source-map-support": "^0.5.12",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "asset-require-hook": "^1.2.0",
     "babel-loader": "^8.0.5",
@@ -64,6 +64,9 @@
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^1.1.2",
+    "vue-loader": "^13.3.0",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.5.2",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14",

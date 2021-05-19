@@ -1,5 +1,5 @@
-import Home from '../page/Home/index.jsx';
-import About from '../page/About/index.jsx';
+import Home from '../page/Home/index';
+import About from '../page/About/index';
 
 const routes = [
   { name: '首页', path: '/', component: Home },
