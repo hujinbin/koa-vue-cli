@@ -1,7 +1,4 @@
 
-## 使用案例
-惊觉:http://jue.leheavengame.com/
-
 ## Build Setup
 
 ``` bash
