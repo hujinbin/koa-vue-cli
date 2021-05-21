@@ -28,7 +28,8 @@
     "koa2-cors": "^2.0.6",
     "pomelo-logger": "^0.1.7",
     "source-map-support": "^0.5.12",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -64,7 +65,7 @@
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^1.1.2",
-    "vue-loader": "^13.3.0",
+    "vue-loader": "^15.4.2",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^4.29.3",

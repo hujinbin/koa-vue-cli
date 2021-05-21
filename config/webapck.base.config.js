@@ -2,6 +2,8 @@
 const path = require('path')
 const vueLoaderConfig = require('./vue-loader.conf')
 
+const vueLoaderPlugin = require('vue-loader/lib/plugin')
+
 
 module.exports = {
     mode: 'development',
@@ -32,4 +34,7 @@ module.exports = {
             { test: /\.html$/, loader: 'html-loader' }
         ]
     },
+    plugins: [
+        new vueLoaderPlugin(),
+    ]
 }

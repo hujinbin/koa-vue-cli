@@ -1,8 +1,15 @@
-import Home from '../page/Home/index';
-import About from '../page/About/index';
+const about = () => import('../page/About/index.vue')
+const home = () => import('../page/Home/index.vue')
 
 const routes = [
-  { name: '首页', path: '/', component: Home },
-  { name: '关于', path: '/about', component: About },
-];
-export default routes;
+  {
+    path: '/',
+    component: home
+  },
+  {
+    path: '/about',
+    component: about
+  },
+]
+
+export default routes

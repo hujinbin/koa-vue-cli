@@ -1,4 +1,4 @@
-async function reactRoute(ctx, next) {
+async function clientRoute(ctx, next) {
     await ctx.render('index',{
         title: '',
         root:'',
@@ -6,4 +6,4 @@ async function reactRoute(ctx, next) {
     await next();
 }
 
-export default reactRoute;
+export default clientRoute;

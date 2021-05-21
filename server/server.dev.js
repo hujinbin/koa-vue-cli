@@ -29,7 +29,7 @@ const devMiddleware = require('koa-webpack-dev-middleware');
 const hotMiddleware = require('koa-webpack-hot-middleware');
 const app = require('./app.js').default;
 const router = require('./routes').default;
-const clientRoute = require('./routes/reactRoute').default;
+const clientRoute = require('./routes/clientRoute').default;
 const port = process.env.port || 3000;
 const errThrow = require('./routes/errThrow')
 
