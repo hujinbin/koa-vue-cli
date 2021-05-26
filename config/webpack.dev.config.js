@@ -24,8 +24,8 @@ module.exports = merge(baseWebpackConfig, {
                 test: /\.(css|less)$/,
                 use: [
                     { loader: 'style-loader' },
-                    { loader: 'css-loader', options: { modules: true, localIdentName: '[local]_[hash:base64:10]' } },
-                    { loader: 'less-loader', options: { modules: true, localIdentName: '[local]_[hash:base64:10]' } },
+                    { loader: 'css-loader', options: { modules: true, localIdentName: '[local]' } },
+                    { loader: 'less-loader', options: { modules: true, localIdentName: '[local]' } },
                 ]
             },
             {

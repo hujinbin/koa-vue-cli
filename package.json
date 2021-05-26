@@ -12,8 +12,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "classnames": "^2.2.6",
-    "consolidate": "^0.15.1",
     "koa": "^2.6.2",
     "koa-body": "^4.1.1",
     "koa-compose": "^4.1.0",
