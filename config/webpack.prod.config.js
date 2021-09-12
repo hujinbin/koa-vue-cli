@@ -10,6 +10,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = [
     merge(baseWebpackConfig, {
+        mode: 'production',
         stats: 'none',
         entry: {
             bundle: './src'
@@ -44,11 +45,11 @@ module.exports = [
         plugins: [
             new ProgressBarPlugin({ summary: true }),
             new UglifyJsPlugin({
-                uglifyOptions: {
-                  compress: {
-                    warnings: false
-                  }
-                },
+                // uglifyOptions: {
+                //   compress: {
+                //     warnings: false
+                //   }
+                // },
                 sourceMap: true,
                 parallel: true
             }),
@@ -56,7 +57,7 @@ module.exports = [
                 filename: 'css/[contenthash:8].[name].css'
             }),
             new HtmlWebpackPlugin({
-                filename: './src/index.html',
+                filename: 'index.html',
                 template: './src/template.html',
                 chunksSortMode: 'none'
             })

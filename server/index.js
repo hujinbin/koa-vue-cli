@@ -37,7 +37,6 @@ const errThrow = require('./routes/errThrow')
 compiler.plugin('emit', (compilation, callback) => {
     const assets = compilation.assets;
     let file, data;
-    console.log(assets)
     Object.keys(assets).forEach(key => {
         if (key.match(/\.html$/)) {
             file = path.resolve(__dirname, key);
@@ -48,7 +47,7 @@ compiler.plugin('emit', (compilation, callback) => {
     callback();
 });
 
-app.use(views(path.resolve(__dirname, '../src'), { map: { html: 'ejs' } }));
+app.use(views(path.resolve(__dirname, '../dist'), { map: { html: 'ejs' } }));
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.use(clientRoute);

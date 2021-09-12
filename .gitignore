@@ -22,4 +22,6 @@ yarn-error.log*
 *.sln
 .VSCodeCounter
 
+package-lock.json
+
 mockUtils.js
