@@ -6,8 +6,8 @@
     "start": "cross-env webpack-dev-server --compress --config config/webpack.config.js",
     "dev": "cross-env nodemon server/server.dev.js --watch server",
     "build": "cross-env webpack --config ./config/webpack.prod.config.js",
-    "server": "npm run build && node ./server/server.prod.js",
-    "startpm": "pm2 start ./server/server.dev.js",
+    "server": "npm run build && node ./server/index.js",
+    "startpm": "npm run build && pm2 start ./server/index.js",
     "delpm": "pm2 delete all"
   },
   "dependencies": {

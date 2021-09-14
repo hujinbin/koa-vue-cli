@@ -28,6 +28,7 @@ const compiler = webpack(config);
 const devMiddleware = require('koa-webpack-dev-middleware');
 const hotMiddleware = require('koa-webpack-hot-middleware');
 const app = require('./app.js').default;
+const serve = require('koa-static');
 const router = require('./routes').default;
 const clientRoute = require('./routes/clientRoute').default;
 const port = process.env.port || 3000;
@@ -48,6 +49,10 @@ compiler.plugin('emit', (compilation, callback) => {
 });
 
 app.use(views(path.resolve(__dirname, '../dist'), { map: { html: 'ejs' } }));
+app.use(serve(path.resolve(__dirname, '../dist')), {
+    // maxage: 0, //浏览器缓存max-age（以毫秒为单位）
+    gzip: true,
+})
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.use(clientRoute);
