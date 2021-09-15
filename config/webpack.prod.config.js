@@ -11,7 +11,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = [
     merge(baseWebpackConfig, {
         mode: 'production',
-        stats: 'none',
+        // stats: 'none',
         entry: {
             bundle: './src'
         },
@@ -44,15 +44,15 @@ module.exports = [
         },
         plugins: [
             new ProgressBarPlugin({ summary: true }),
-            new UglifyJsPlugin({
-                // uglifyOptions: {
-                //   compress: {
-                //     warnings: false
-                //   }
-                // },
-                sourceMap: true,
-                parallel: true
-            }),
+            // new UglifyJsPlugin({
+            //     uglifyOptions: {
+            //       compress: {
+            //         warnings: false
+            //       }
+            //     },
+            //     sourceMap: true,
+            //     parallel: true
+            // }),
             new MiniCssExtractPlugin({
                 filename: 'css/[contenthash:8].[name].css'
             }),
@@ -64,7 +64,7 @@ module.exports = [
         ]
     }),
     merge(baseWebpackConfig, {
-        stats: 'none',
+        // stats: 'none',
         entry: {
             server: './server/server.prod.js'
         },
@@ -110,15 +110,6 @@ module.exports = [
 
         plugins: [
             new ProgressBarPlugin({ summary: true }),
-            new UglifyJsPlugin({
-                uglifyOptions: {
-                  compress: {
-                    warnings: false
-                  }
-                },
-                sourceMap: true,
-                parallel: true
-           })
         ]
     })
 ];
