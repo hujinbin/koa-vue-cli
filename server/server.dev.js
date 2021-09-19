@@ -37,7 +37,6 @@ const errThrow = require('./routes/errThrow')
 compiler.plugin('emit', (compilation, callback) => {
     const assets = compilation.assets;
     let file, data;
-    console.log(assets)
     Object.keys(assets).forEach(key => {
         if (key.match(/\.html$/)) {
             file = path.resolve(__dirname, key);
