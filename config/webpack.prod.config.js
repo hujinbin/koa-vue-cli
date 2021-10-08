@@ -11,7 +11,11 @@ const baseWebpackConfig = require('./webapck.base.config')
 module.exports = [
     merge(baseWebpackConfig, {
         mode: 'production',
-        // stats: 'none',
+        devtool: false,
+        // devtool: 'source-map',
+        optimization: {
+            minimize: true
+        },
         entry: {
             bundle: './src'
         },
