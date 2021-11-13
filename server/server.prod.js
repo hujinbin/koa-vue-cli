@@ -5,6 +5,7 @@ import views from 'koa-views'
 import app from './app.js';
 import router from './routes/index';
 import clientRoute from './routes/clientRoute';
+import errThrow from "./routes/errThrow";
 
 const port = process.env.port || 3000;
 
@@ -13,6 +14,7 @@ app.use(serve(path.resolve(__dirname, '../dist')));
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.use(clientRoute);
+app.use(errThrow);
 app.listen(port, () => {
     console.log(`open up http://localhost:${port}/ in your browser.`);
 });
