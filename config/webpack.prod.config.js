@@ -32,8 +32,8 @@ module.exports = [
                     exclude: /node_modules/,
                     use: [
                         { loader: MiniCssExtractPlugin.loader },
-                        { loader: 'css-loader', options: { modules: true, localIdentName: '[local]_[hash:base64:10]' } },
-                        { loader: 'less-loader', options: { modules: true, localIdentName: '[local]_[hash:base64:10]' } }
+                        { loader: 'css-loader', options: { modules: true, localIdentName: '[local]' } },
+                        { loader: 'less-loader', options: { modules: true, localIdentName: '[local]' } }
                     ]
                 },
                 {
@@ -61,7 +61,7 @@ module.exports = [
                 filename: 'css/[contenthash:8].[name].css'
             }),
             new HtmlWebpackPlugin({
-                filename: 'index.html',
+                filename: './src/index.html',
                 template: './src/template.html',
                 chunksSortMode: 'none'
             })
@@ -69,6 +69,7 @@ module.exports = [
     }),
     merge(baseWebpackConfig, {
         // stats: 'none',
+        mode: 'production',
         entry: {
             server: './server/server.prod.js'
         },
@@ -89,8 +90,8 @@ module.exports = [
                     exclude: /node_modules/,
                     use: [
                         { loader: 'isomorphic-style-loader' },
-                        { loader: 'css-loader', options: { modules: true, localIdentName: '[local]_[hash:base64:10]' } },
-                        { loader: 'less-loader', options: { modules: true, localIdentName: '[local]_[hash:base64:10]' } }
+                        { loader: 'css-loader', options: { modules: true, localIdentName: '[local]' } },
+                        { loader: 'less-loader', options: { modules: true, localIdentName: '[local]' } }
                     ]
                 },
                 {
